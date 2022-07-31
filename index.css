@@ -1,0 +1,306 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+ "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: var(--body-bg);
+}
+
+.theme-standard {
+  --path-1-fill: #fa8072;
+  --path-2-fill: #fca5a0;
+  --path-3-fill: #f7caca;
+  --body-bg: #e0a2a2;
+  --cont-btn-act-bg: #fa8072;
+  --btn-bg-hover: #e0a2a2;
+  --btn-bg: rgba(85, 85, 85, 0.3);
+  --theme-border-color: #f7caca;
+  --theme-text-color: #fff;
+}
+
+.theme-crisp-dramatic {
+  --path-1-fill: #598234;
+  --path-2-fill: #a4c2e2;
+  --path-3-fill: #aebd38;
+  --body-bg: #598234;
+  --theme-border-color: #598234;
+  --btn-bg-hover: #a4c2e2;
+  --cont-btn-act-bg: #a4c2e2;
+  --btn-bg: #aebd38;
+  --theme-text-color: #fff;
+}
+
+.theme-mint-choco {
+  --path-1-fill: #8a523c;
+  --path-2-fill: #d8c596;
+  --path-3-fill: #00e1ff;
+  --body-bg: #47280f;
+  --cont-btn-act-bg: #00e1ff;
+  --btn-bg: #47280f;
+  --btn-bg-hover: #8a523c;
+  --theme-border-color: #d8c596;
+  --theme-text-color: #fff;
+}
+
+.theme-surf-turf {
+  --path-1-fill: #f4cc70;
+  --path-2-fill: #20948b;
+  --path-3-fill: #6ab187;
+  --body-bg: #de7a22;
+  --cont-btn-act-bg: #20948b;
+  --btn-bg: #0a6d65;
+  --theme-border-color: #f4cc70;
+  --btn-bg-hover: #6ab187;
+  --theme-text-color: #fff;
+}
+
+.theme-black-white {
+  --path-1-fill: #acacac;
+  --path-2-fill: #4f4f4f;
+  --path-3-fill: #7e7e7e;
+  --body-bg: #040404;
+  --cont-btn-act-bg: #aaa5a5;
+  --btn-bg: #4f4f4f;
+  --theme-border-color: #e4e4e4;
+  --btn-bg-hover: #7e7e7e;
+  --theme-text-color: #fff;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 63rem;
+  width: 30rem;
+  background: var(--cont-btn-act-bg);
+  overflow: hidden;
+  color: var(--theme-text-color);
+}
+
+#header {
+  position: absolute;
+  top: 0;
+}
+
+.app-title {
+  position: absolute;
+  top: 2.5rem;
+  padding-left: 3rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.3rem #555;
+}
+
+#main {
+  position: absolute;
+  height: 49rem;
+  width: 30rem;
+}
+
+.add-btn {
+  padding: 0.3rem 0;
+  width: 100%;
+}
+
+.add-btn,
+.clear-items,
+#select,
+.masterlist {
+  position: relative;
+  font-size: 2rem;
+  z-index: 10;
+  background: var(--btn-bg);
+  -webkit-box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.336);
+          box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.336);
+  border: none;
+  border-radius: 0 0 1rem 1rem;
+  border-bottom: 0.5rem solid var(--theme-border-color);
+  cursor: pointer;
+  color: var(--theme-text-color);
+  text-align: center;
+}
+
+.add-btn:active,
+.clear-items:active,
+#select:active,
+.masterlist:active {
+  background: var(--cont-btn-act-bg);
+}
+
+.add-btn:hover,
+.clear-items:hover,
+#select:hover,
+.masterlist:hover {
+  background: var(--btn-bg-hover);
+}
+
+#select {
+  outline: none;
+  padding: 0.5rem 2rem;
+  top: -1rem;
+  width: 100%;
+}
+
+.masterlist,
+.clear-items {
+  width: 100%;
+  top: 27.5vh;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+#ul-items {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: transparent;
+  height: 38rem;
+  width: 100%;
+  gap: 0.3rem;
+  top: 8rem;
+  bottom: 1rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+#ul-items::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  list-style: none;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.item-list.item-list {
+  position: relative;
+  padding: 0 0 0.2rem 2rem;
+  font-size: 1.8rem;
+  top: 0.5rem;
+  margin-left: 1rem;
+  width: 70%;
+  outline: none;
+  border: none;
+  color: var(--theme-text-color);
+  border-bottom: 0.1rem solid var(--theme-border-color);
+  background: none;
+}
+
+.cb-bought {
+  position: relative;
+  -webkit-appearance: none;
+  top: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  color: var(--theme-text-color);
+  border: 0.1rem solid var(--theme-border-color);
+}
+
+.cb-bought::after {
+  position: absolute;
+  content: "✓";
+  font-size: 3rem;
+  display: none;
+  font-weight: 500;
+  top: -1.5rem;
+}
+
+.cb-bought:checked + .item-list {
+  text-decoration: line-through;
+  border: none;
+}
+
+.cb-bought:checked::after {
+  display: block;
+}
+
+.bottom-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.copyright {
+  position: absolute;
+  top: 7rem;
+  padding-left: 7rem;
+  font-size: 1.3rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: -0.5rem;
+}
+.path-1 {
+  fill: var(--path-1-fill);
+}
+.path-2 {
+  fill: var(--path-2-fill);
+}
+.path-3 {
+  fill: var(--path-3-fill);
+}
+/*# sourceMappingURL=exer30.css.map */

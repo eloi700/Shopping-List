@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PWA LINKS -->
+    <!-- <link rel="manifest" href="manifest.json" /> -->
+    <meta name="theme-color" content="#777" />
+    <meta name="description" content="Personal Shopping List." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Personal Shopping List" />
+    <meta name="apple-mobile-web-app-title" content="Shopping List" />
+    <meta name="msapplication-starturl" content="/home.html" />
+    <link rel="stylesheet" href="index.css" />
+    <!-- <link rel="stylesheet" href="/up/css/exer30.css" /> -->
+    <link rel="icon" type="image/svg+xml" sizes="any" href="icon.svg" />
+    <link rel="apple-touch-icon" href="icon192.png" />
+    <link rel="apple-touch-icon" href="icon512.png" />
+    <title>Shopping List</title>
+  </head>
+  <body class="theme-standard">
+    <div class="container">
+      <div id="header">
+        <h1 class="app-title">Personal Shopping List</h1>
+        <svg
+          id="visual"
+          viewBox="0 0 300 100"
+          width="300"
+          height="100"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+        >
+          <path
+            class="path-1"
+            d="M0 80L5 75.3C10 70.7 20 61.3 30 58.2C40 55 50 58 60 62.7C70 67.3 80 73.7 90 72.7C100 71.7 110 63.3 120 62.2C130 61 140 67 150 65C160 63 170 53 180 52.3C190 51.7 200 60.3 210 60.8C220 61.3 230 53.7 240 52.7C250 51.7 260 57.3 270 61.2C280 65 290 67 295 68L300 69L300 0L295 0C290 0 280 0 270 0C260 0 250 0 240 0C230 0 220 0 210 0C200 0 190 0 180 0C170 0 160 0 150 0C140 0 130 0 120 0C110 0 100 0 90 0C80 0 70 0 60 0C50 0 40 0 30 0C20 0 10 0 5 0L0 0Z"
+          ></path>
+
+          <path
+            class="path-2"
+            d="M0 39L5 38.2C10 37.3 20 35.7 30 38.8C40 42 50 50 60 50.2C70 50.3 80 42.7 90 41.5C100 40.3 110 45.7 120 47.8C130 50 140 49 150 49.2C160 49.3 170 50.7 180 48.3C190 46 200 40 210 40.7C220 41.3 230 48.7 240 47.7C250 46.7 260 37.3 270 37.7C280 38 290 48 295 53L300 58L300 0L295 0C290 0 280 0 270 0C260 0 250 0 240 0C230 0 220 0 210 0C200 0 190 0 180 0C170 0 160 0 150 0C140 0 130 0 120 0C110 0 100 0 90 0C80 0 70 0 60 0C50 0 40 0 30 0C20 0 10 0 5 0L0 0Z"
+          ></path>
+
+          <path
+            class="path-3"
+            d="M0 17L5 20.2C10 23.3 20 29.7 30 31.2C40 32.7 50 29.3 60 28.2C70 27 80 28 90 27.5C100 27 110 25 120 25.8C130 26.7 140 30.3 150 31.5C160 32.7 170 31.3 180 28.7C190 26 200 22 210 19.5C220 17 230 16 240 16.8C250 17.7 260 20.3 270 22.3C280 24.3 290 25.7 295 26.3L300 27L300 0L295 0C290 0 280 0 270 0C260 0 250 0 240 0C230 0 220 0 210 0C200 0 190 0 180 0C170 0 160 0 150 0C140 0 130 0 120 0C110 0 100 0 90 0C80 0 70 0 60 0C50 0 40 0 30 0C20 0 10 0 5 0L0 0Z"
+          ></path>
+        </svg>
+      </div>
+      <div id="main">
+        <form class="form">
+          <div class="btn-opt-wrapper">
+            <select id="select" name="choice">
+              <option value="Crisp Dramatic" class="opt crispy-dramatic">
+                Crisp Dramatic
+              </option>
+              <option value="Mint Chocolate" class="opt mint-choco">
+                Mint Chocolate
+              </option>
+              <option value="Surf & Turf" class="opt surf-turf">
+                Surf & Turf
+              </option>
+              <option value="Black & White" class="opt black-white">
+                Black & White
+              </option>
+              <option value="Theme" class="opt theme-standard" selected>
+                Theme
+              </option>
+            </select>
+            <button type="submit" class="add-btn">Add</button>
+          </div>
+          <ul id="ul-items"></ul>
+          <div class="bottom-btn">
+            <button type="button" class="clear-items">Clear Items</button>
+            <button type="button" class="masterlist">⊕ Masterlist</button>
+          </div>
+        </form>
+      </div>
+      <div id="footer">
+        <h6 class="copyright">All Rights Reserved. &copy;2022</h6>
+        <svg
+          id="visual"
+          viewBox="0 0 300 100"
+          width="300"
+          height="100"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+        >
+          <path
+            class="path-1"
+            d="M0 18L5 22.7C10 27.3 20 36.7 30 39.8C40 43 50 40 60 35.3C70 30.7 80 24.3 90 25.3C100 26.3 110 34.7 120 35.8C130 37 140 31 150 33C160 35 170 45 180 45.7C190 46.3 200 37.7 210 37.2C220 36.7 230 44.3 240 45.3C250 46.3 260 40.7 270 36.8C280 33 290 31 295 30L300 29L300 101L295 101C290 101 280 101 270 101C260 101 250 101 240 101C230 101 220 101 210 101C200 101 190 101 180 101C170 101 160 101 150 101C140 101 130 101 120 101C110 101 100 101 90 101C80 101 70 101 60 101C50 101 40 101 30 101C20 101 10 101 5 101L0 101Z"
+          ></path>
+
+          <path
+            class="path-2"
+            d="M0 59L5 59.8C10 60.7 20 62.3 30 59.2C40 56 50 48 60 47.8C70 47.7 80 55.3 90 56.5C100 57.7 110 52.3 120 50.2C130 48 140 49 150 48.8C160 48.7 170 47.3 180 49.7C190 52 200 58 210 57.3C220 56.7 230 49.3 240 50.3C250 51.3 260 60.7 270 60.3C280 60 290 50 295 45L300 40L300 101L295 101C290 101 280 101 270 101C260 101 250 101 240 101C230 101 220 101 210 101C200 101 190 101 180 101C170 101 160 101 150 101C140 101 130 101 120 101C110 101 100 101 90 101C80 101 70 101 60 101C50 101 40 101 30 101C20 101 10 101 5 101L0 101Z"
+          ></path>
+
+          <path
+            class="path-3"
+            d="M0 81L5 77.8C10 74.7 20 68.3 30 66.8C40 65.3 50 68.7 60 69.8C70 71 80 70 90 70.5C100 71 110 73 120 72.2C130 71.3 140 67.7 150 66.5C160 65.3 170 66.7 180 69.3C190 72 200 76 210 78.5C220 81 230 82 240 81.2C250 80.3 260 77.7 270 75.7C280 73.7 290 72.3 295 71.7L300 71L300 101L295 101C290 101 280 101 270 101C260 101 250 101 240 101C230 101 220 101 210 101C200 101 190 101 180 101C170 101 160 101 150 101C140 101 130 101 120 101C110 101 100 101 90 101C80 101 70 101 60 101C50 101 40 101 30 101C20 101 10 101 5 101L0 101Z"
+          ></path>
+        </svg>
+      </div>
+    </div>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then((serviceWorker) => {
+            console.log("Service Worker registered: ", serviceWorker);
+          })
+          .catch((error) => {
+            console.error("Error registering the Service Worker: ", error);
+          });
+      }
+    </script>
+
+    <script src="index.js"></script>
+  </body>
+</html>

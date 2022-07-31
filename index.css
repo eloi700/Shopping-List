@@ -118,7 +118,7 @@ body {
 .app-title {
   position: absolute;
   top: 2.5rem;
-  padding-left: 3rem;
+  padding-left: 2.8rem;
   text-transform: uppercase;
   text-shadow: 0 0 0.3rem #555;
 }
@@ -176,7 +176,7 @@ body {
 .masterlist,
 .clear-items {
   width: 100%;
-  top: 27.5vh;
+  top: 41rem;
   z-index: 1;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -294,12 +294,15 @@ li {
   position: absolute;
   bottom: -0.5rem;
 }
+
 .path-1 {
   fill: var(--path-1-fill);
 }
+
 .path-2 {
   fill: var(--path-2-fill);
 }
+
 .path-3 {
   fill: var(--path-3-fill);
 }
